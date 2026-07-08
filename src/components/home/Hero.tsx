@@ -141,10 +141,12 @@ export default function Hero() {
         </div>
 
         {/* Elegant Small Bottom Banner (Outlined White/Green Pill at bottom-3 md:bottom-5) */}
-        <div className="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 chip-premium rounded-full pl-3 md:pl-4 pr-1 md:pr-1.5 py-1 md:py-1.5 flex items-center gap-2 md:gap-3 shadow-lg max-w-[calc(100%-24px)] md:max-w-none z-10">
-          <div className="flex items-center gap-1.5 md:gap-2 min-w-0">
-            <HomeIcon className="w-3.5 md:w-4 h-3.5 md:h-4 text-white/90 flex-shrink-0" />
-            <span className="text-white text-[11px] md:text-sm font-medium truncate">
+        <div className="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 chip-premium rounded-3xl md:rounded-full px-4 py-3.5 md:pl-5 md:pr-2 md:py-2 flex flex-col md:flex-row items-center gap-3 md:gap-4 shadow-lg border border-white/10 z-10 w-[calc(100%-24px)] md:w-auto max-w-[340px] md:max-w-none">
+          <div className="flex items-center gap-1.5 md:gap-2.5 min-w-0">
+            <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <HomeIcon className="w-3.5 md:w-4 h-3.5 md:h-4 text-white/90" />
+            </div>
+            <span className="text-white text-xs md:text-sm font-semibold whitespace-nowrap">
               <span className="hidden md:inline">Evinizin değerini öğrenmek ister misiniz?</span>
               <span className="md:hidden">Evinizin değerini öğrenin</span>
             </span>
@@ -153,9 +155,11 @@ export default function Hero() {
             href="https://wa.me/905335187357?text=Merhaba,%20evimin%20değerini%20öğrenmek%20istiyorum."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-premium-amber text-white font-bold text-[10px] md:text-xs rounded-full px-2.5 md:px-3 py-1 md:py-1.5 whitespace-nowrap flex-shrink-0 cursor-pointer"
+            className="btn-degerini-ogren shrink-0 scale-105 md:scale-100 transition-transform duration-200"
           >
-            Değerini Öğren
+            <span className="btn-degerini-ogren-inner whitespace-nowrap text-xs font-bold">
+              Değerini Öğren
+            </span>
           </a>
         </div>
 
