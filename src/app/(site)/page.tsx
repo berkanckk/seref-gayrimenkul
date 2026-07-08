@@ -3,6 +3,9 @@ import { getFeaturedProperties, getSiteSettings } from "@/sanity/lib/fetchers"
 import Hero from "@/components/home/Hero"
 import Categories from "@/components/home/Categories"
 import FeaturedListings from "@/components/home/FeaturedListings"
+import MarketOverview from "@/components/home/MarketOverview"
+import HomeValueCalculator from "@/components/home/HomeValueCalculator"
+import MortgageCalculator from "@/components/home/MortgageCalculator"
 import WhyUs from "@/components/home/WhyUs"
 import CTASection from "@/components/home/CTASection"
 import { JsonLd } from "@/components/shared/JsonLd"
@@ -86,6 +89,15 @@ export default async function HomePage() {
 
       {/* Grid of featured listings with double filter tabs */}
       <FeaturedListings properties={featured} />
+
+      {/* Market overview section */}
+      <MarketOverview />
+
+      {/* Home value calculator section */}
+      <HomeValueCalculator />
+
+      {/* Mortgage calculator section */}
+      <MortgageCalculator />
 
       {/* Why choose us trust features */}
       <WhyUs />
