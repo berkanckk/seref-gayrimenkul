@@ -141,12 +141,12 @@ export default function Hero() {
         </div>
 
         {/* Elegant Small Bottom Banner (Outlined White/Green Pill at bottom-3 md:bottom-5) */}
-        <div className="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 chip-premium rounded-3xl md:rounded-full px-4 py-3.5 md:pl-5 md:pr-2 md:py-2 flex flex-col md:flex-row items-center gap-3 md:gap-4 shadow-lg border border-white/10 z-10 w-[calc(100%-24px)] md:w-auto max-w-[340px] md:max-w-none">
+        <div className="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 flex flex-col md:flex-row items-center gap-2.5 md:gap-4 z-10 w-full md:w-auto px-4 md:px-0 bg-transparent border-none shadow-none backdrop-blur-none md:chip-premium md:rounded-full md:pl-5 md:pr-2 md:py-2 md:border md:border-white/10 md:shadow-lg">
           <div className="flex items-center gap-1.5 md:gap-2.5 min-w-0">
             <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/10 flex items-center justify-center shrink-0">
               <HomeIcon className="w-3.5 md:w-4 h-3.5 md:h-4 text-white/90" />
             </div>
-            <span className="text-white text-xs md:text-sm font-semibold whitespace-nowrap">
+            <span className="text-white text-xs md:text-sm font-semibold whitespace-nowrap" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.6)" }}>
               <span className="hidden md:inline">Evinizin değerini öğrenmek ister misiniz?</span>
               <span className="md:hidden">Evinizin değerini öğrenin</span>
             </span>
