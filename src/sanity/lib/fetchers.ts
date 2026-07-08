@@ -33,18 +33,16 @@ import type {
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-/** Shared fetch options for property lists — revalidate every 5 minutes */
+/** Shared fetch options for property lists */
 const propertyFetchOptions = {
   next: {
-    revalidate: REVALIDATE.PROPERTIES,
     tags: ["property", "properties"],
   },
 }
 
-/** Shared fetch options for singletons — revalidate every hour */
+/** Shared fetch options for singletons */
 const settingsFetchOptions = {
   next: {
-    revalidate: REVALIDATE.SETTINGS,
     tags: ["siteSettings"],
   },
 }
@@ -127,8 +125,7 @@ export async function getFeaturedProperties(): Promise<Property[]> {
       {},
       {
         next: {
-          revalidate: REVALIDATE.PROPERTIES,
-          tags: ["property", "featured"],
+          tags: ["property", "properties", "featured"],
         },
       }
     )
@@ -150,7 +147,6 @@ export async function getPropertyBySlug(slug: string): Promise<Property | null> 
       { slug },
       {
         next: {
-          revalidate: REVALIDATE.PROPERTIES,
           tags: ["property", `property:${slug}`],
         },
       }
@@ -214,8 +210,7 @@ export async function getAllPropertySlugs(): Promise<string[]> {
       {},
       {
         next: {
-          revalidate: REVALIDATE.SLUGS,
-          tags: [CACHE_TAGS.PROPERTIES],
+          tags: ["property", "properties"],
         },
       }
     )
@@ -309,7 +304,6 @@ export async function getAboutPage(): Promise<AboutPage | null> {
       {},
       {
         next: {
-          revalidate: REVALIDATE.SETTINGS,
           tags: ["aboutPage"],
         },
       }
@@ -331,7 +325,6 @@ export async function getContactPage(): Promise<ContactPage | null> {
       {},
       {
         next: {
-          revalidate: REVALIDATE.SETTINGS,
           tags: ["contactPage"],
         },
       }
