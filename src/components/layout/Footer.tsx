@@ -171,7 +171,7 @@ export default function Footer({ settings }: FooterProps) {
                   className="flex items-center gap-3 text-sm font-semibold text-text-muted hover:text-primary-green transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 text-primary-green flex-shrink-0" />
-                  <span className="truncate">{settings.email}</span>
+                  <span className="break-all">{settings.email}</span>
                 </a>
               )}
 

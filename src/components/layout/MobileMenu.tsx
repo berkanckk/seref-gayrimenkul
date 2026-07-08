@@ -160,7 +160,7 @@ export default function MobileMenu({
                   <div className="bg-bg-soft p-2 rounded-xl border border-border-light">
                     <Mail className="h-4 w-4 text-primary-green" />
                   </div>
-                  <span className="font-semibold truncate">{settings.email}</span>
+                  <span className="font-semibold break-all">{settings.email}</span>
                 </a>
               )}
 

@@ -37,7 +37,7 @@ import type {
 const propertyFetchOptions = {
   next: {
     revalidate: REVALIDATE.PROPERTIES,
-    tags: [CACHE_TAGS.PROPERTIES],
+    tags: ["property", "properties"],
   },
 }
 
@@ -45,7 +45,7 @@ const propertyFetchOptions = {
 const settingsFetchOptions = {
   next: {
     revalidate: REVALIDATE.SETTINGS,
-    tags: [CACHE_TAGS.SITE_SETTINGS],
+    tags: ["siteSettings"],
   },
 }
 
@@ -128,7 +128,7 @@ export async function getFeaturedProperties(): Promise<Property[]> {
       {
         next: {
           revalidate: REVALIDATE.PROPERTIES,
-          tags: [CACHE_TAGS.FEATURED],
+          tags: ["property", "featured"],
         },
       }
     )
@@ -151,7 +151,7 @@ export async function getPropertyBySlug(slug: string): Promise<Property | null> 
       {
         next: {
           revalidate: REVALIDATE.PROPERTIES,
-          tags: [CACHE_TAGS.PROPERTIES, `property-${slug}`],
+          tags: ["property", `property:${slug}`],
         },
       }
     )
@@ -310,7 +310,7 @@ export async function getAboutPage(): Promise<AboutPage | null> {
       {
         next: {
           revalidate: REVALIDATE.SETTINGS,
-          tags: [CACHE_TAGS.ABOUT_PAGE],
+          tags: ["aboutPage"],
         },
       }
     )
@@ -332,7 +332,7 @@ export async function getContactPage(): Promise<ContactPage | null> {
       {
         next: {
           revalidate: REVALIDATE.SETTINGS,
-          tags: [CACHE_TAGS.CONTACT_PAGE],
+          tags: ["contactPage"],
         },
       }
     )

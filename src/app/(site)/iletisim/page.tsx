@@ -235,7 +235,7 @@ export default async function ContactPage() {
                       <Mail className="h-4.5 w-4.5 text-primary-green-dark mt-0.5 flex-shrink-0" />
                       <div>
                         <div className="text-[9px] font-extrabold text-text-muted uppercase tracking-wider leading-none mb-1">E-posta</div>
-                        <a href={`mailto:${safeSettings.email}`} className="text-sm font-extrabold text-text-primary hover:underline truncate block max-w-[200px]">
+                        <a href={`mailto:${safeSettings.email}`} className="text-sm font-extrabold text-text-primary hover:underline break-all block">
                           {safeSettings.email}
                         </a>
                       </div>
