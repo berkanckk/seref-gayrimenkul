@@ -26,9 +26,9 @@ const CATEGORY_ITEMS = [
     href: "/ilanlar?tip=satilik&tur=Villa",
   },
   {
-    label: "Satılık Dükkan",
+    label: "Satılık Dükkan/Mağaza",
     icon: Store,
-    href: "/ilanlar?tip=satilik&tur=Dükkan",
+    href: "/ilanlar?tip=satilik&tur=Dükkan / Mağaza",
   },
   {
     label: "Tüm İlanlar",

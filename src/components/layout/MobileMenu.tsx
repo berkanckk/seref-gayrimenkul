@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Clock, MessageSquare, Home as HomeIcon } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, MessageSquare, Home as HomeIcon, Calculator, Wallet } from "lucide-react"
 import {
   Sheet,
   SheetContent,
@@ -115,6 +115,30 @@ export default function MobileMenu({
             >
               İletişim
             </Link>
+
+            <div className="border-t border-gray-100 pt-4 mt-4">
+              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider px-1 mb-3">
+                Araçlar
+              </p>
+              
+              <Link
+                href="/#home-value"
+                onClick={handleLinkClick}
+                className="flex items-center gap-3 py-3 px-1 text-base font-medium text-text-primary hover:text-primary-green transition-colors"
+              >
+                <Calculator className="w-5 h-5 text-primary-green" />
+                Evimin Değeri Hesaplayıcı
+              </Link>
+              
+              <Link
+                href="/#mortgage"
+                onClick={handleLinkClick}
+                className="flex items-center gap-3 py-3 px-1 text-base font-medium text-text-primary hover:text-primary-green transition-colors"
+              >
+                <Wallet className="w-5 h-5 text-primary-green" />
+                Konut Kredisi Hesaplayıcı
+              </Link>
+            </div>
           </nav>
 
           {/* Contact Info Block */}

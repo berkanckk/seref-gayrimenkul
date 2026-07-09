@@ -63,7 +63,7 @@ export default function HomeValueCalculator() {
     : "";
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-primary-green-softer/30 to-white">
+    <section id="home-value" className="py-16 md:py-20 bg-gradient-to-b from-primary-green-softer/30 to-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left: Info */}

@@ -38,11 +38,13 @@ export default function FeaturedListings({ properties }: FeaturedListingsProps) 
       )
     }
     if (activeGroup === "Arsa") {
-      return properties.filter(p => p.propertyType === "Arsa")
+      return properties.filter(p => 
+        ["Arsa", "Tarla"].includes(p.propertyType)
+      )
     }
     if (activeGroup === "Ticari") {
       return properties.filter(p => 
-        ["Dükkan", "Ofis", "Depo"].includes(p.propertyType)
+        ["Dükkan / Mağaza", "Ofis", "Depo", "Fabrika"].includes(p.propertyType)
       )
     }
     return []

@@ -14,10 +14,12 @@ const PROPERTY_TYPES = [
   { label: "Villa", value: "Villa" },
   { label: "Müstakil Ev", value: "Müstakil Ev" },
   { label: "Arsa", value: "Arsa" },
-  { label: "Dükkan", value: "Dükkan" },
+  { label: "Tarla", value: "Tarla" },
+  { label: "Dükkan / Mağaza", value: "Dükkan / Mağaza" },
   { label: "Ofis", value: "Ofis" },
   { label: "Depo", value: "Depo" },
   { label: "Bina", value: "Bina" },
+  { label: "Fabrika", value: "Fabrika" },
   { label: "Çiftlik", value: "Çiftlik" },
 ]
 
@@ -30,10 +32,12 @@ function normalizePropertyType(val: string | null): string {
   if (raw === "villa") return "Villa"
   if (raw === "mustakil" || raw === "mustakil-ev" || raw === "müstakil" || raw === "müstakil ev") return "Müstakil Ev"
   if (raw === "arsa") return "Arsa"
-  if (raw === "dukkan" || raw === "dükkan") return "Dükkan"
+  if (raw === "tarla") return "Tarla"
+  if (raw === "dukkan" || raw === "dükkan" || raw === "dükkan / mağaza" || raw === "dükkan/mağaza") return "Dükkan / Mağaza"
   if (raw === "ofis") return "Ofis"
   if (raw === "depo") return "Depo"
   if (raw === "bina") return "Bina"
+  if (raw === "fabrika") return "Fabrika"
   if (raw === "ciftlik" || raw === "çiftlik") return "Çiftlik"
   return val
 }

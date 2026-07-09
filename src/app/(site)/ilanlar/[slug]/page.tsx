@@ -398,7 +398,6 @@ export default async function PropertyDetailPage({ params }: PropertyPageProps) 
                   { label: "Tapu Durumu", value: property.titleDeedStatus },
                   { label: "Krediye Uygun", value: property.suitableForLoan === true ? "Evet" : property.suitableForLoan === false ? "Hayır" : null },
                   { label: "Takasa Uygun", value: property.swapAvailable === true ? "Evet" : property.swapAvailable === false ? "Hayır" : null },
-                  { label: "İlan Tarihi", value: relativeDate },
                 ].map((row, idx) => {
                   if (row.value === null || row.value === undefined || row.value === "") return null
                   return (

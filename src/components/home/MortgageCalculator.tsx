@@ -37,7 +37,7 @@ export default function MortgageCalculator() {
   const loanAmount = propertyPrice - downPayment;
 
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section id="mortgage" className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-10 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-primary-green-softer text-primary-green px-4 py-1.5 rounded-full text-sm font-semibold mb-4">

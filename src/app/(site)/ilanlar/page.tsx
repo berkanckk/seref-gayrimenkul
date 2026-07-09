@@ -52,10 +52,12 @@ async function parseFilters(paramsPromise: PageProps['searchParams']): Promise<P
     else if (raw === "villa") propertyType = "Villa"
     else if (raw === "mustakil" || raw === "mustakil-ev" || raw === "müstakil" || raw === "müstakil ev") propertyType = "Müstakil Ev"
     else if (raw === "arsa") propertyType = "Arsa"
-    else if (raw === "dukkan" || raw === "dükkan") propertyType = "Dükkan"
+    else if (raw === "tarla") propertyType = "Tarla"
+    else if (raw === "dukkan" || raw === "dükkan" || raw === "dükkan / mağaza" || raw === "dükkan/mağaza") propertyType = "Dükkan / Mağaza"
     else if (raw === "ofis") propertyType = "Ofis"
     else if (raw === "depo") propertyType = "Depo"
     else if (raw === "bina") propertyType = "Bina"
+    else if (raw === "fabrika") propertyType = "Fabrika"
     else if (raw === "ciftlik" || raw === "çiftlik") propertyType = "Çiftlik"
     else {
       propertyType = (params.tur.charAt(0).toUpperCase() + params.tur.slice(1)) as PropertyType

@@ -114,10 +114,12 @@ export const property = defineType({
           { title: 'Müstakil Ev', value: 'Müstakil Ev' },
           { title: 'Villa', value: 'Villa' },
           { title: 'Arsa', value: 'Arsa' },
-          { title: 'Dükkan', value: 'Dükkan' },
+          { title: 'Tarla', value: 'Tarla' },
+          { title: 'Dükkan / Mağaza', value: 'Dükkan / Mağaza' },
           { title: 'Ofis', value: 'Ofis' },
           { title: 'Depo', value: 'Depo' },
           { title: 'Bina', value: 'Bina' },
+          { title: 'Fabrika', value: 'Fabrika' },
           { title: 'Çiftlik', value: 'Çiftlik' },
         ],
       },
@@ -220,12 +222,16 @@ export const property = defineType({
           { title: 'Stüdyo', value: 'Stüdyo' },
           { title: '1+0', value: '1+0' },
           { title: '1+1', value: '1+1' },
+          { title: '2+0', value: '2+0' },
           { title: '2+1', value: '2+1' },
           { title: '2+2', value: '2+2' },
+          { title: '3+0', value: '3+0' },
           { title: '3+1', value: '3+1' },
           { title: '3+2', value: '3+2' },
+          { title: '4+0', value: '4+0' },
           { title: '4+1', value: '4+1' },
           { title: '4+2', value: '4+2' },
+          { title: '5+0', value: '5+0' },
           { title: '5+1', value: '5+1' },
           { title: '5+2', value: '5+2' },
           { title: '6+ Oda', value: '6+ Oda' },
@@ -509,26 +515,31 @@ export const property = defineType({
     }),
 
     defineField({
-      name: 'images',
-      title: 'Galeri Fotoğrafları',
-      type: 'array',
-      group: 'media',
-      description: 'İlan detay sayfasında galeri olarak gösterilecek fotoğraflar. İlk fotoğraf kapak olmayacak; yukarıdaki kapak görseli ayrıca belirtilmiştir.',
+      name: "images",
+      title: "Galeri Fotoğrafları",
+      type: "array",
+      group: "media",
+      description: "Birden fazla fotoğrafı aynı anda seçip yükleyebilirsiniz. Fotoğrafları sürükleyip bırakarak sıralayabilirsiniz.",
       of: [
-        defineArrayMember({
-          type: 'image',
-          options: { hotspot: true },
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
           fields: [
-            defineField({
-              name: 'alt',
-              title: 'Alt Metin',
-              type: 'string',
-              description: 'Görselin açıklaması (SEO için önemli)',
-            }),
+            {
+              name: "alt",
+              title: "Alt Metin",
+              type: "string",
+              description: "SEO için görsel açıklaması (opsiyonel)",
+            },
           ],
-        }),
+        },
       ],
-      validation: (Rule) => Rule.min(1).warning('En az 1 galeri fotoğrafı eklemeniz önerilir'),
+      options: {
+        layout: "grid",
+      },
+      validation: (Rule) => Rule.min(1).error("En az 1 fotoğraf gereklidir"),
     }),
 
     defineField({

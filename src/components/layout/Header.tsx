@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname, useSearchParams } from "next/navigation"
-import { Phone, Menu, Home as HomeIcon } from "lucide-react"
+import { Phone, Menu, Home as HomeIcon, Calculator, Wallet, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { getPropertyPhoneCallUrl } from "@/lib/formatters"
 import { urlFor } from "@/sanity/lib/image"
@@ -94,6 +94,30 @@ export default function Header({ settings }: HeaderProps) {
             >
               İletişim
             </Link>
+
+            <div className="relative group">
+              <button className="text-sm font-semibold tracking-wide text-text-body hover:text-primary-green transition-colors flex items-center gap-1 cursor-pointer">
+                Araçlar
+                <ChevronDown className="w-3 h-3" />
+              </button>
+              
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link 
+                  href="/#home-value" 
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-text-primary hover:bg-primary-green-softer hover:text-primary-green transition-colors font-medium"
+                >
+                  <Calculator className="w-4 h-4" />
+                  Evimin Değeri
+                </Link>
+                <Link 
+                  href="/#mortgage" 
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-text-primary hover:bg-primary-green-softer hover:text-primary-green transition-colors font-medium"
+                >
+                  <Wallet className="w-4 h-4" />
+                  Konut Kredisi
+                </Link>
+              </div>
+            </div>
           </nav>
 
           {/* Center: Logo (Sanity icon + lowercase "serefgyo" text) */}
