@@ -37,6 +37,7 @@ export default function Hero() {
     { label: "Satılık Daire", href: "/ilanlar?tip=satilik&tur=Daire" },
     { label: "Kiralık Daire", href: "/ilanlar?tip=kiralik&tur=Daire" },
     { label: "Satılık Arsa", href: "/ilanlar?tip=satilik&tur=Arsa" },
+    { label: "Satılık Fabrika", href: "/ilanlar?tip=satilik&tur=Fabrika" },
   ]
 
   return (

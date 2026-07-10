@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Home, Key, Trees, Building, Store, LayoutGrid } from "lucide-react"
+import { Home, Key, Trees, Building, Store, LayoutGrid, Factory } from "lucide-react"
 
 const CATEGORY_ITEMS = [
   {
@@ -31,6 +31,11 @@ const CATEGORY_ITEMS = [
     href: "/ilanlar?tip=satilik&tur=Dükkan / Mağaza",
   },
   {
+    label: "Satılık Fabrika",
+    icon: Factory,
+    href: "/ilanlar?tip=satilik&tur=Fabrika",
+  },
+  {
     label: "Tüm İlanlar",
     icon: LayoutGrid,
     href: "/ilanlar",
@@ -41,7 +46,7 @@ export default function Categories() {
   return (
     <section className="bg-white pt-4 pb-3 md:pt-5 md:pb-4 font-body">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-5 justify-center">
+        <div className="grid grid-cols-3 md:grid-cols-7 gap-3 md:gap-5 justify-center">
           {CATEGORY_ITEMS.map((item, index) => {
             const IconComponent = item.icon
             return (
